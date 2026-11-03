@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://disc02ug4sgow"]
+
+[ext_resource type="Script" uid="uid://baj7q2ngdh3mg" path="res://levels/room_base.gd" id="1_pni84"]
+[ext_resource type="PackedScene" uid="uid://b3uq381fx7hr8" path="res://entities/player/player.tscn" id="2_otttf"]
+
+[node name="GameSpawn" type="Node2D" unique_id=1660232672]
+script = ExtResource("1_pni84")
+
+[node name="Player" parent="." unique_id=2095323984 instance=ExtResource("2_otttf")]
+position = Vector2(100, 70)

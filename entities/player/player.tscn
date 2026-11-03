@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abrql"]
 atlas = ExtResource("1_symyc")
-region = Rect2(64, 32, 32, 32)
+region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d1p6d"]
 animations = [{
@@ -20,7 +20,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1p6d"]
 
-[node name="Player" type="CharacterBody2D" unique_id=2095323984]
+[node name="Player" type="CharacterBody2D" unique_id=2095323984 groups=["player"]]
+y_sort_enabled = true
 script = ExtResource("1_abrql")
 speed = null
 
@@ -30,3 +31,9 @@ sprite_frames = SubResource("SpriteFrames_d1p6d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838240767]
 shape = SubResource("RectangleShape2D_d1p6d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1236645504]
+limit_enabled = false
+position_smoothing_speed = 20.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
