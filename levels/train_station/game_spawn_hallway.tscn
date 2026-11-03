@@ -25,6 +25,3 @@ position = Vector2(1, 263)
 [node name="Door" parent="." unique_id=13133841 instance=ExtResource("3_wdbde")]
 visible = false
 position = Vector2(-8, 280)
-id = 0
-target_room_scene = "res://levels/train_station/game_spawn.tscn"
-target_door_id = 0
