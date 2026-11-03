@@ -19,6 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1p6d"]
+size = Vector2(14, 3.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=2095323984 groups=["player"]]
 y_sort_enabled = true
@@ -27,9 +28,13 @@ speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1602977869]
 unique_name_in_owner = true
+position = Vector2(0, 8)
 sprite_frames = SubResource("SpriteFrames_d1p6d")
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838240767]
+z_index = 1
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_d1p6d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1236645504]
@@ -37,3 +42,8 @@ limit_enabled = false
 position_smoothing_speed = 20.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
+editor_draw_drag_margin = true

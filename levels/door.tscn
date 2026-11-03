@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bxq5evpjvun5a"]
+
+[ext_resource type="Script" uid="uid://bhw6x45keidme" path="res://levels/door.gd" id="1_120vl"]
+[ext_resource type="Texture2D" uid="uid://balnvt5t25fnc" path="res://visuals/placeholder/placeholder_tileset.png" id="2_xc1x7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1p6d"]
+size = Vector2(48, 48)
+
+[node name="Door" type="Area2D" unique_id=13133841 groups=["doors"]]
+y_sort_enabled = true
+script = ExtResource("1_120vl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=340098114]
+position = Vector2(0, 8)
+texture = ExtResource("2_xc1x7")
+offset = Vector2(0, -8)
+region_enabled = true
+region_rect = Rect2(177, 176, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4416238]
+z_index = 1
+shape = SubResource("RectangleShape2D_d1p6d")

@@ -13,5 +13,9 @@ func _ready() -> void:
 
 # This function goes to the room. Fails if the target room has not a door to it
 func go_to_room(room: String, door_id: int) -> void:
-	return
+	target_door_id = door_id
+	if is_on_main:
+		pass
+	else:
+		get_tree().change_scene_to_file(room)
 	
