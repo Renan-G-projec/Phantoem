@@ -100,4 +100,11 @@ var item_state: Dictionary = {
 }
 
 @export_enum("none", "wrench", "antenna", "boiler_room_card", "tnt", "wheel", "deposit_key", "boiler_room_fuel", "train_fuel", "train_lever", "boiler_room_gear", "crt_fuse", "boiler_room_lever")\
-	var current_item: String = "none" 
+var current_item: String = "none":
+	set(val):
+		if current_item == val: return
+		current_item = val
+		current_item_changed.emit(current_item)
+		
+		Utils.print("Item changed: %s" % val)
+signal current_item_changed(new_item: String)

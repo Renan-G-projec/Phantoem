@@ -3,9 +3,18 @@ class_name Item
 extends Sprite2D
 
 @export_enum("wrench", "antenna", "boiler_room_card", "tnt", "wheel", "deposit_key", "boiler_room_fuel", "train_fuel", "train_lever", "boiler_room_gear", "crt_fuse", "boiler_room_lever")\
-	var id: String
+var id: String:
+	set(val):
+		if id == val: return
+		id = val
+		
+		if _texture_table.has(id):
+			texture = _texture_table[id]
 
 var _player_is_on_area: bool = false
+var _texture_table: Dictionary[String, Texture2D] = {
+	
+}
 
 func _pick_item() -> void:
 	if GameManager.current_item != "none": return
