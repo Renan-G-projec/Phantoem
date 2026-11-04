@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://baj7q2ngdh3mg" path="res://levels/room_base.gd" id="1_pni84"]
 [ext_resource type="TileSet" uid="uid://beok2i2e1ttpl" path="res://visuals/tilesets/game_tileset.tres" id="2_efpge"]
 [ext_resource type="PackedScene" uid="uid://b3uq381fx7hr8" path="res://entities/player/player.tscn" id="2_otttf"]
+[ext_resource type="PackedScene" uid="uid://cae8mefce8136" path="res://environment/item.tscn" id="3_dkomq"]
 [ext_resource type="PackedScene" uid="uid://bxq5evpjvun5a" path="res://levels/door.tscn" id="4_xu1hq"]
 
 [node name="GameSpawn" type="Node2D" unique_id=1660232672]
@@ -19,8 +20,12 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAFAA0AAAAAAAEAAAAFAA0AAAAAAAIAAAAFAA0
 tile_set = ExtResource("2_efpge")
 collision_enabled = false
 
-[node name="Player" parent="." unique_id=2095323984 instance=ExtResource("2_otttf")]
+[node name="Item" parent="." unique_id=1752682052 instance=ExtResource("3_dkomq")]
 position = Vector2(17, 104)
+id = "wrench"
+
+[node name="Player" parent="." unique_id=2095323984 instance=ExtResource("2_otttf")]
+position = Vector2(47, 92)
 
 [node name="Door" parent="." unique_id=13133841 instance=ExtResource("4_xu1hq")]
 position = Vector2(25, -8)

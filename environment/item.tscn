@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cae8mefce8136"]
+
+[ext_resource type="Script" uid="uid://6hrhjhxq564" path="res://environment/item.gd" id="1_5pwy4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kdpyk"]
+size = Vector2(8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ph7h"]
+radius = 7.071068
+
+[node name="Item" type="Sprite2D" unique_id=1752682052]
+texture = SubResource("PlaceholderTexture2D_kdpyk")
+script = ExtResource("1_5pwy4")
+
+[node name="CollectableArea" type="Area2D" parent="." unique_id=1844247106]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableArea" unique_id=724109021]
+shape = SubResource("CircleShape2D_4ph7h")
+
+[connection signal="body_entered" from="CollectableArea" to="." method="_on_collectable_area_body_entered"]
+[connection signal="body_exited" from="CollectableArea" to="." method="_on_collectable_area_body_exited"]

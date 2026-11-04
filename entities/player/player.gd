@@ -23,6 +23,12 @@ func _physics_process(delta: float) -> void:
 		state = State.IDLE
 		velocity = Vector2.ZERO
 	
+	if Input.is_action_just_pressed("drop_item") && GameManager.current_item != "none":
+		var front: Vector2 = global_position + Vector2(direction * 8)
+		
+		SceneManager.instantiate_item(front, GameManager.current_item)
+		GameManager.current_item = "none"
+	
 	move_and_slide()
 
 func _update_input() -> bool:

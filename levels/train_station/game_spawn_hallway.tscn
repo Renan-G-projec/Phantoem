@@ -21,7 +21,11 @@ collision_enabled = false
 
 [node name="Player" parent="." unique_id=2095323984 instance=ExtResource("2_83hlu")]
 position = Vector2(1, 263)
+speed = 55.0
 
 [node name="Door" parent="." unique_id=13133841 instance=ExtResource("3_wdbde")]
 visible = false
 position = Vector2(-8, 280)
+id = null
+target_room_scene = null
+target_door_id = null

@@ -20,3 +20,6 @@ region_rect = Rect2(177, 176, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4416238]
 z_index = 1
 shape = SubResource("RectangleShape2D_d1p6d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

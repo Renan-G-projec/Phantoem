@@ -39,74 +39,65 @@ var puzzle_state: Dictionary = {
 var item_state: Dictionary = {
 	"wrench": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"antenna": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"boiler_room_card": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"tnt": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"wheel": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"deposit_key": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"boiler_room_fuel": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"train_fuel": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"train_lever": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"boiler_room_gear": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"crt_fuse": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 	"boiler_room_lever": {
 		"current_room": null,
-		"scene": null,
 		"is_picked": false,
 		"position": null
 	},
 }
+
+@export_enum("none", "wrench", "antenna", "boiler_room_card", "tnt", "wheel", "deposit_key", "boiler_room_fuel", "train_fuel", "train_lever", "boiler_room_gear", "crt_fuse", "boiler_room_lever")\
+	var current_item: String = "none" 
